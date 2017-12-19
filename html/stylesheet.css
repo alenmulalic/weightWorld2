@@ -8,22 +8,29 @@ body{
   margin:0;
   padding: 0;
 }
+pre {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 150%;
+  color:black;
+}
 .menu-icon {
   position: fixed;
   top: 20px;
   right: 20px;
-  width: 50px;
-  height: 44px;
+  width: 60px;
+  height: 47px;
   padding:4px 8px;
-  background:black;
+  background:skyblue;
   box-sizing: border-box;
   cursor: pointer;
+  border-radius: 12px;
 }
 .menu-icon span{
   width:100%;
   height: 4px;
   display: block;
-  background: grey;
+  background: yellow;
   margin:6px 0;
   transition: .5s;
 }
@@ -38,7 +45,7 @@ body{
   height: 70vh;
   background: black;
   transition: .5s;
-  border-radius: 12px;
+  border-radius: 20px 0px 0px 20px ;
   opacity: .7;
   padding: 20px;
   text-align: center;
@@ -56,7 +63,7 @@ body{
   font-family: sans-serif;
 }
 .sidebar .menu li a{
-  display:block;
+  display: inline-block;
   padding:10px 0;
   text-transform: capitalize;
   color: white;
@@ -68,17 +75,6 @@ body{
   color: yellow;
   border-radius:12px;
 }
-.menu-icon.active {
-  display: none;
-}
-
-pre {
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 150%;
-  color:black;
-}
-
 .social-icon {
   margin:0;
   padding: 0;
@@ -108,5 +104,65 @@ pre {
 }
 .social-icon li a:hover {
   background: skyblue;
+  color:yellow;
+}
+.loginBox {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 950px;
+  height: 420px;
+  box-sizing: border-box;
+  background: rgba(0,0,0,.5);
+  border-radius: 12px;
+  padding: 0px 40px;
+}
+h2{
+  text-align: center;
+  color: yellow;
+  font-size: 300%;
+}
+.loginBox p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: yellow;
+}
+.loginBox a {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+.loginBox input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.loginBox input[type="text"]
+.loginBox input[type="password"]
+{
+  border: none;
+  border-bottom:1px solid black;
+  outline: none;
+  height: 40px;
+  color: yellow;
+}
+::placeholder{
+  color: black;
+}
+.loginBox input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor:pointer;
+  width: 50%;
+  background: hotpink;
+}
+.loginBox .button:hover {
+  background: yellow;
+}
+.loginBox a:hover {
   color:yellow;
 }
