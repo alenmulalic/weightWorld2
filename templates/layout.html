@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weight World</title>
+  <h1>Weight World</h1>
+  <script src="{{url_for('static',filename='scripts/login.js')}}"></script>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type "text/css" href="{{url_for('static',filename='styles/mainpage.css')}}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+   <script  src="https://code.jquery.com/jquery-3.2.1.js"></script>
+   <script type="text/javascript">
+      $(document).ready(function(){
+        $(".menu-icon").click(function(){
+          $(".menu-icon").toggleClass("active")
+        })
+        $(".menu-icon").click(function(){
+          $(".sidebar").toggleClass("active")
+        })
+      })
+    </script>
+</script>
+</head>
+<body>
+  <div class="container">
+    {%block content%}
+    {%endblock%}
+
+  </div>
+
+  <div class = "menu-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class = "sidebar">
+    <ul class = "menu">
+      <li></a><a href="{{url_for('home')}}">Home</a></li>
+      <li><a href="{{url_for('login')}}">Login</a></li>
+      <li><a href="{{url_for('workout')}}">Workout Log</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact Us</a></li>
+
+    </ul>
+    <ul class = "social-icon">
+      <li><a href="#" <i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+      <li><a href="#" <i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+      <li><a href="#" <i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+    </ul>
+  </div>
+
+</body>
+</html>
