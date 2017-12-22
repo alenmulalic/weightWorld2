@@ -14,5 +14,9 @@ function workoutFunction() {
   alert(reps)
   var weight = document.getElementById('weight').value;
   alert(weight)
+}
 
+function signUp() {
+  var signUpEmail = document.getElementById('newEmail');
+  var signUpPassword = document.getElementById('newPassword');
 }

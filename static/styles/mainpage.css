@@ -22,6 +22,19 @@
   right: 0;
 }
 
+h4{
+  color:#32353a;
+  text-align: center;
+}
+
+.input-group {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#signUpcontainer {
+  margin: auto;
+}
+
 h1{
   color:#32353a;
   font-size: 400%;
