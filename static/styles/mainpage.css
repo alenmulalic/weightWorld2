@@ -1,5 +1,29 @@
+#jumbo-override {
+  background-image: url('img1.jpg');
+  background-size: cover;
+}
+
+.bg-light {
+    background-color: #32353a!important;
+}
+
+.navbar-default {
+  background-image: none;
+  background: #181d26;
+  background-repeat: no-repeat;
+}
+
+.dropdown-menu:after{
+  left: auto;
+  right: 13px;
+}
+.dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
 h1{
-  color:salmon;
+  color:#32353a;
   font-size: 400%;
   text-align: center;
   font-style: oblique;
