@@ -18,5 +18,7 @@ function workoutFunction() {
 
 function signUp() {
   var signUpEmail = document.getElementById('newEmail');
+  alert(signUpEmail);
   var signUpPassword = document.getElementById('newPassword');
+  alert(signUpPassword);
 }
