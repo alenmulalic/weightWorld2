@@ -1,24 +1,50 @@
-function loginFunction() {
-  var email  = document.getElementById('inputEmail').value;
-  alert(email)
-  var password  = document.getElementById('inputPassword').value;
-  alert(password)
-}
-
-function workoutFunction() {
-  var workout = document.getElementById('workout').value;
-  alert(workout)
-  var sets = document.getElementById('sets').value;
-  alert(sets)
-  var reps = document.getElementById('reps').value;
-  alert(reps)
-  var weight = document.getElementById('weight').value;
-  alert(weight)
-}
-
-function signUp() {
-  var signUpEmail = document.getElementById('newEmail');
-  alert(signUpEmail);
-  var signUpPassword = document.getElementById('newPassword');
-  alert(signUpPassword);
-}
+ (function() {
+	// Initialize Firebase
+	  var config = {
+		apiKey: "AIzaSyC4veNMKpc2XyEtQJxg_5ZGNwmfBAexu8c",
+		authDomain: "weightworld-67d35.firebaseapp.com",
+		databaseURL: "https://weightworld-67d35.firebaseio.com",
+		projectId: "weightworld-67d35",
+		storageBucket: "weightworld-67d35.appspot.com",
+		messagingSenderId: "360326042761"
+	  };
+	  firebase.initializeApp(config);
+	 
+ }());
+ // Get elements
+ const txtEmail = document.getElementById('inputEmail');
+ const txtPassword = document.getElementById('inputPassword');
+ const btnLogin = document.getElementById('btnLogin');
+ const btnSignUp = document.getElementById('btnSignUp');
+ 
+ // Add login event
+ btnLogin.addEventListener('click', e=> {
+	 // Get email and password
+	 const email = txtEmail.value;
+	 const pass = txtPassword.value;
+	 const auth = firebase.auth();
+	 //Sign in 
+	 const promise = auth.signInWithEmailAndPassword(email, pass);
+	 promise.catch(e => console.log(e.message));
+ });
+ 
+  // Add SignUp event
+ btnSignUp.addEventListener('click', e=> {
+	 // TODO: CHECK FOR A REAL EMAIL
+	 // Get email and password
+	 const email = txtEmail.value;
+	 const pass = txtPassword.value;
+	 const auth = firebase.auth();
+	 //Sign in 
+	 const promise = auth.createUserWithEmailAndPassword(email, pass);
+	 promise.catch(e => console.log(e.message));
+ });
+ 
+ // Add a realtime listener
+ firebase.auth().onAuthStateChanged(firebaseUser => {
+	 if(firebaseUser) {
+		 console.log(firebaseUser);
+	 } else {
+		 console.log('not logged in');
+	 }
+ });
