@@ -1,14 +1,13 @@
 {%extends "layout.html"%}
 {%block content%}
-<div class="form-group">
-  <label class="col-form-label" for="formGroupExampleInput">Workout</label>
-  <input type="text" class="form-control" id="workout" placeholder=" . . this is going to be a drop down list">
-  <label class="col-form-label" for="formGroupExampleInput2">Sets:</label>
-  <input type="text" class="form-control" id="sets" placeholder="you can add each set individually or all at once">
-  <label class="col-form-label" for="formGroupExampleInput2">Reps:</label>
-  <input type="text" class="form-control" id="reps" placeholder="you can add each set individually or all at once">
-  <label class="col-form-label" for="formGroupExampleInput2">Weight:</label>
-  <input type="text" class="form-control" id="weight" placeholder="you can add each set individually or all at once">
-  <button class="btn btn-lg btn-primary btn-block" type="submit" onclick= "workoutFunction()">Save</button>
+<div class="input-group">
+  <select class="form-control">
+    <option>Select Workout</option>
+    <option>Bench Press</option>
+    <option>Squat</option>
+    </optgroup>
+  </select>
+  <button class="btn btn-primary" type="submit" id='workoutSubmit'><i class="fa fa-check" aria-hidden="true"></i></button>
 </div>
+
 {%endblock%}
