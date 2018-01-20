@@ -1,29 +1,23 @@
-{%extends "layout.html"%}
-{%block content%}
-
+<!DOCTYPE html>
+<html>
+<header>
+  <meta charset="utf-8">
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+</header>
+<body>
 <div class="container" id="signUpcontainer">
   <h4>Login</h4>
   <div class="input-group">
     <input type="text" class="form-control" id="inputEmail" placeholder="Email...">
   </div>
   <div class="input-group">
-    <input type="text" class="form-control" id="inputPassword" placeholder="Password...">
+    <input type="password" class="form-control" id="inputPassword" placeholder="Password...">
   </div>
   <div class="container">
     <button class="btn btn-lg btn-primary btn-block" type="submit" id="newSignIn">Login</button>
-    <a href="{{url_for('signUp')}}" role="button" class="btn btn-lg btn-primary btn-block">Sign Up</a>
+    <!-- <a href="{{url_for('signUp')}}" role="button" class="btn btn-lg btn-primary btn-block">Sign Up</a> -->
   </div>
 </div>
-
-
-<!-- <div  class="loginBox">
-  <h2> Log in here</h2>
-    <p>Email</p>
-    <input type="text" id= "inputEmail" placeholder= "Enter Email">
-    <p>Password</p>
-    <input type="text" id="inputPassword" placeholder= "Enter Password">
-    <input type="submit" class="button button1" id="btnLogin" value="Log In" >
-    <a href="#">Forgot Password</a>
-    <input type="submit" class="button button2" id="btnSignUp" value="Sign Up">
-</div> -->
-{%endblock%}
+<script src="{{url_for('static',filename='scripts/login.js')}}"></script>
+</body>
+</html>
