@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-<html>
-<header>
-  <meta charset="utf-8">
-  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-</header>
-<body>
+{%extends "layout.html"%}
+{%block content%}
+
 <div class="container" id="signUpcontainer">
-  <h4>Login</h4>
+  <h4>Sign In</h4>
   <div class="input-group">
-    <input type="text" class="form-control" id="inputEmail" placeholder="Email...">
+    <input type="text" class="form-control" id="newEmail" placeholder="Email...">
   </div>
   <div class="input-group">
-    <input type="password" class="form-control" id="inputPassword" placeholder="Password...">
+    <input type="password" class="form-control" id="newPassword" placeholder="Password...">
   </div>
-  <div class="container">
-    <button class="btn btn-lg btn-primary btn-block" type="submit" id="newSignIn">Login</button>
-    <!-- <a href="{{url_for('signUp')}}" role="button" class="btn btn-lg btn-primary btn-block">Sign Up</a> -->
+  <div class="input-group">
+    <button class="btn btn-lg btn-primary btn-block" type="submit" id="newSignUp">Sign In</button>
   </div>
 </div>
-<script src="{{url_for('static',filename='scripts/login.js')}}"></script>
-</body>
-</html>
+
+{%endblock%}
