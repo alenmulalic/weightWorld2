@@ -1,4 +1,3 @@
-
 window.onload=function(){
   var workout = document.getElementById('workoutSubmit');
   document.getElementById('mainForm').style.display ="none";
