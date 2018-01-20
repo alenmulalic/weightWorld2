@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  (function() {
 	// Initialize Firebase
 	  var config = {
@@ -69,32 +70,50 @@ window.onload=function(){
 
   //signup
   btnSignUp.addEventListener('click', e=>{
+=======
+(function() {
+  // Initialize Firebase
+  const config = {
+    apiKey: "AIzaSyC4veNMKpc2XyEtQJxg_5ZGNwmfBAexu8c",
+    authDomain: "weightworld-67d35.firebaseapp.com",
+    databaseURL: "https://weightworld-67d35.firebaseio.com",
+    projectId: "weightworld-67d35",
+    storageBucket: "weightworld-67d35.appspot.com",
+    messagingSenderId: "360326042761"
+    };
+    
+    firebase.initializeApp(config);
+    //Get elements
+    const txtEmail = document.getElementById("Email");
+    const txtPassword = document.getElementById("Password");
+    const btnLogin = document.getElementById("btnLogin");
+
+    //add login event
+    btnLogin.addEventListener('click', e=> {
+    //get email and Password
+>>>>>>> 37530e1dd96bf064cca455b4489c3b531e732d76
     const email = txtEmail.value;
- 	  const pass = txtPassword.value;
- 	  const auth = firebase.auth();
-    const promise = auth.createUserWithEmailAndPassword(email, pass);
-    promise.catch(e => console.log(e.message));
-
-  });
-
-  //signIn
-
-  btnLogin.addEventListener('click', e=> {
-    //get email and password
-    const email = loginEmail.value;
-    const pass = loginPassword.value;
+    const pass = txtPassword.value;
     const auth = firebase.auth();
-    //Sign in
-    const promise = auth.createUserWithEmailAndPassword(email, pass);
-    promise.catch(e => console.log(e.message));
-  });
 
-  firebase.auth().onAuthStateChanged(firebaseUser => {
-    if(firebaseUser) {
-      console.log(firebaseUser);
-    } else {
-      console.log('not logged in');
+    //Sign in
+    const promise = auth.signInWithEmailAndPassword(email, pass);
+    promise.then(user => {
+      if (user.emailVerified) {
+      //Add a realtime listener
+      firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+      // User is signed in.
+      console.log("user signed in")
+      } else {
+      // No user is signed in.
+      console.log("no user signed in")
+      }
+      });
+      } else {
+      console.log("error");
     }
+<<<<<<< HEAD
   });
 
 }
@@ -133,3 +152,8 @@ window.onload=function(){
 	//  }
  // });
 >>>>>>> c1289395c60a3f4ef856efd9a744d11981c4baa4
+=======
+  })
+});
+}());
+>>>>>>> 37530e1dd96bf064cca455b4489c3b531e732d76
