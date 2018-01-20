@@ -9,37 +9,39 @@
 		messagingSenderId: "360326042761"
 	  };
 	  firebase.initializeApp(config);
-	 
+
  }());
  // Get elements
  const txtEmail = document.getElementById('inputEmail');
  const txtPassword = document.getElementById('inputPassword');
  const btnLogin = document.getElementById('btnLogin');
  const btnSignUp = document.getElementById('btnSignUp');
- 
+
  // Add login event
  btnLogin.addEventListener('click', e=> {
 	 // Get email and password
+   console.log("in login");
 	 const email = txtEmail.value;
 	 const pass = txtPassword.value;
 	 const auth = firebase.auth();
-	 //Sign in 
+	 //Sign in
 	 const promise = auth.signInWithEmailAndPassword(email, pass);
 	 promise.catch(e => console.log(e.message));
  });
- 
+
   // Add SignUp event
  btnSignUp.addEventListener('click', e=> {
+   console.log("in sign up");
 	 // TODO: CHECK FOR A REAL EMAIL
 	 // Get email and password
 	 const email = txtEmail.value;
 	 const pass = txtPassword.value;
 	 const auth = firebase.auth();
-	 //Sign in 
+	 //Sign in
 	 const promise = auth.createUserWithEmailAndPassword(email, pass);
 	 promise.catch(e => console.log(e.message));
  });
- 
+
  // Add a realtime listener
  firebase.auth().onAuthStateChanged(firebaseUser => {
 	 if(firebaseUser) {
