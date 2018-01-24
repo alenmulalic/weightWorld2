@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
  (function() {
 	// Initialize Firebase
 	  var config = {
@@ -10,7 +10,7 @@
 		messagingSenderId: "360326042761"
 	  };
 	  firebase.initializeApp(config);
-<<<<<<< HEAD
+
 
  }());
  // Get elements
@@ -52,10 +52,6 @@
 		 console.log('not logged in');
 	 }
  });
-=======
- }());
-
-
 
 window.onload=function(){
   //variable intilization
@@ -70,7 +66,7 @@ window.onload=function(){
 
   //signup
   btnSignUp.addEventListener('click', e=>{
-=======
+
 (function() {
   // Initialize Firebase
   const config = {
@@ -81,7 +77,7 @@ window.onload=function(){
     storageBucket: "weightworld-67d35.appspot.com",
     messagingSenderId: "360326042761"
     };
-    
+
     firebase.initializeApp(config);
     //Get elements
     const txtEmail = document.getElementById("Email");
@@ -91,7 +87,7 @@ window.onload=function(){
     //add login event
     btnLogin.addEventListener('click', e=> {
     //get email and Password
->>>>>>> 37530e1dd96bf064cca455b4489c3b531e732d76
+
     const email = txtEmail.value;
     const pass = txtPassword.value;
     const auth = firebase.auth();
@@ -113,10 +109,10 @@ window.onload=function(){
       } else {
       console.log("error");
     }
-<<<<<<< HEAD
+
   });
 
-}
+})
 
 
 
@@ -151,9 +147,3 @@ window.onload=function(){
 	// 	 console.log('not logged in');
 	//  }
  // });
->>>>>>> c1289395c60a3f4ef856efd9a744d11981c4baa4
-=======
-  })
-});
-}());
->>>>>>> 37530e1dd96bf064cca455b4489c3b531e732d76
