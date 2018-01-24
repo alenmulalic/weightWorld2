@@ -14,7 +14,7 @@
 
 
 window.onload=function(){
-  var testBtn = document.getElementById('newSignUp');
+  var testBtn = document.getElementById('newSignUp2');
   const txtEmail =document.getElementById('newEmail');
   const txtPassword = document.getElementById('newPassword');
 
