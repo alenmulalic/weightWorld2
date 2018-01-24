@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
  (function() {
 	// Initialize Firebase
@@ -67,6 +68,8 @@ window.onload=function(){
   //signup
   btnSignUp.addEventListener('click', e=>{
 
+=======
+>>>>>>> 83552c7dfe85a6551bff76f7fac97d1ed404073e
 (function() {
   // Initialize Firebase
   const config = {
@@ -87,10 +90,14 @@ window.onload=function(){
     //add login event
     btnLogin.addEventListener('click', e=> {
     //get email and Password
+<<<<<<< HEAD
 
+=======
+>>>>>>> 83552c7dfe85a6551bff76f7fac97d1ed404073e
     const email = txtEmail.value;
     const pass = txtPassword.value;
     const auth = firebase.auth();
+    console.log('button click');
 
     //Sign in
     const promise = auth.signInWithEmailAndPassword(email, pass);
@@ -109,6 +116,7 @@ window.onload=function(){
       } else {
       console.log("error");
     }
+<<<<<<< HEAD
 
   });
 
@@ -147,3 +155,8 @@ window.onload=function(){
 	// 	 console.log('not logged in');
 	//  }
  // });
+=======
+  })
+})
+});
+>>>>>>> 83552c7dfe85a6551bff76f7fac97d1ed404073e

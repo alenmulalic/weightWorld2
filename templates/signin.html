@@ -1,17 +1,17 @@
 {%extends "layout.html"%}
 {%block content%}
 
-<div class="container" id="signUpcontainer">
+<div class="container" id="signIncontainer">
   <h4>Sign In</h4>
   <div class="input-group">
-    <input type="text" class="form-control" id="newEmail" placeholder="Email...">
+    <input type="text" class="form-control" id="Email" placeholder="Email...">
   </div>
   <div class="input-group">
-    <input type="password" class="form-control" id="newPassword" placeholder="Password...">
+    <input type="password" class="form-control" id="Password" placeholder="Password...">
   </div>
   <div class="input-group">
-    <button class="btn btn-lg btn-primary btn-block" type="submit" id="newSignUp">Sign In</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" id="btnLogin">Sign In</button>
   </div>
 </div>
-
+<script src="{{url_for('static',filename='scripts/login.js')}}"></script>
 {%endblock%}
