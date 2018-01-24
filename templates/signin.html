@@ -1,29 +1,17 @@
 {%extends "layout.html"%}
 {%block content%}
 
-<div class="container" id="signUpcontainer">
-  <h4>Login</h4>
+<div class="container" id="signIncontainer">
+  <h4>Sign In</h4>
   <div class="input-group">
-    <input type="text" class="form-control" id="inputEmail" placeholder="Email...">
+    <input type="text" class="form-control" id="Email" placeholder="Email...">
   </div>
   <div class="input-group">
-    <input type="text" class="form-control" id="inputPassword" placeholder="Password...">
+    <input type="password" class="form-control" id="Password" placeholder="Password...">
   </div>
-  <div class="container">
-    <button class="btn btn-lg btn-primary btn-block" type="submit" id="newSignIn">Login</button>
-    <a href="{{url_for('signUp')}}" role="button" class="btn btn-lg btn-primary btn-block">Sign Up</a>
+  <div class="input-group">
+    <button class="btn btn-lg btn-primary btn-block" type="submit" id="btnLogin">Sign In</button>
   </div>
 </div>
-
-
-<!-- <div  class="loginBox">
-  <h2> Log in here</h2>
-    <p>Email</p>
-    <input type="text" id= "inputEmail" placeholder= "Enter Email">
-    <p>Password</p>
-    <input type="text" id="inputPassword" placeholder= "Enter Password">
-    <input type="submit" class="button button1" id="btnLogin" value="Log In" >
-    <a href="#">Forgot Password</a>
-    <input type="submit" class="button button2" id="btnSignUp" value="Sign Up">
-</div> -->
+<script src="{{url_for('static',filename='scripts/login.js')}}"></script>
 {%endblock%}
