@@ -67,6 +67,15 @@ window.onload=function(){
 
   //signup
   btnSignUp.addEventListener('click', e=>{
+<<<<<<< HEAD
+    console.log('Button has been clicked');
+    const email = txtEmail.value;
+ 	  const pass = txtPassword.value;
+ 	  const auth = firebase.auth();
+    const promise = auth.createUserWithEmailAndPassword(email, pass);
+    promise.catch(e => console.log(e.message));
+=======
+>>>>>>> cc2891d15ee8e70728d0a7a5ede75238e0055aa9
 
 =======
 >>>>>>> 83552c7dfe85a6551bff76f7fac97d1ed404073e
