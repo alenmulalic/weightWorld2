@@ -31,7 +31,7 @@ window.onload=function(){
       if (user) {
       // User is signed in.
       console.log("user signed in")
-    
+        window.location='/workout/';
       } else {
       // No user is signed in.
       console.log("no user signed in")
