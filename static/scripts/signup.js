@@ -20,12 +20,14 @@ window.onload=function(){
 
 
   testBtn.addEventListener('click', function(){
-    console.log("test");
     var email = txtEmail.value;
     var pass = txtPassword.value;
     const auth = firebase.auth();
     const promise = auth.createUserWithEmailAndPassword(email,pass);
-    promise.catch(e =>console.log(e.message));
-
-  });
-}
+    promise.then(user => {
+      user.sendEmailVerification();
+      alert('Please verify email before logging in')
+      console.log("Email sent")
+      }).catch(error => console.log);
+      });
+    }
